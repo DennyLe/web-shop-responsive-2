@@ -1,0 +1,20 @@
+@charset 'utf-8';
+@import 'header';
+@import 'content';
+@import 'footer';
+@import 'fonts';
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: $col;
+    background-color: $bg-col;
+    font-family: $font-fam;
+    line-height: $line-h;
+    // width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    font-size: $fz;
+}

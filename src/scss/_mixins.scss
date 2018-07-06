@@ -1,0 +1,123 @@
+@charset 'utf-8';
+@mixin text-style-mixin ($fw) {
+    text-decoration: none;
+    font-style: normal;
+    font-weight: $fw;
+    line-height: 20px;
+    font-size: 13px;
+    padding: 1px;
+}
+
+@mixin show-icon($icon-width, $icon-height, $icon-position-in-sprite) {
+    float: left;
+    width: $icon-width;
+    height: $icon-height;
+    background-image: url('./../img/sprite/sprite.png');
+    background-position: 0 $icon-position-in-sprite;
+}
+
+@mixin form-tool($w,
+$h,
+$br,
+$mt,
+$ml) {
+    float: left;
+    width: 300px;
+    height: 50px;
+    border: 2px solid $border-col;
+    border-radius: 30px;
+    // margin-top: 17px;
+    // margin-left: 30px;
+    &:hover {
+        border-color: $hover-col;
+    }
+}
+
+@mixin input-tool() {
+    border: none;
+    outline: none;
+    -webkit-appearance: none;
+    color: $col;
+    margin: 11px 0 0 15px;
+    font-size: $fz - 5;
+    font-weight: bold;
+    padding-left: 40px;
+}
+
+@mixin submit-btn-tool($w,
+$h,
+$br) {
+    float: right;
+    width: $w;
+    height: $h;
+    font-size: $fz -6;
+    font-weight: bold;
+    color: $label-col;
+    border: 1px solid $bg-col;
+    border-style: none;
+    border-radius: $br;
+    margin-top: 3px;
+    margin-right: 3px;
+}
+
+@mixin footer-columns($col-width,
+$col-height) {
+    width: $col-width;
+    height: $col-height;
+    float: left;
+}
+
+@mixin footer-columns-ul() {
+    list-style-position: inside;
+    -moz-column-count: 2;
+    /* Firefox */
+    -webkit-column-count: 2;
+    /* Safari and Chrome */
+    column-count: 2;
+    list-style: none;
+    margin-left: 40px;
+    margin-top: 15px
+}
+
+@mixin footer-columns-li() {
+    color: $link-col;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 30px;
+    font-size: $fz - 5;
+    padding: 1px;
+    margin: 0;
+}
+
+@mixin slider-tool($top,
+$ml,
+$w,
+$h,
+$c,
+$fw) {
+    position: absolute;
+    top: $top;
+    margin-left: $ml;
+    z-index: 101;
+    width: $w;
+    height: $h;
+    color: $c;
+    font-weight: $fw;
+    padding-top: 5px;
+    text-align: center;
+}
+
+@mixin tabs-btn-tool($w) {
+    width: $w;
+    height: 40px;
+    background-color: $bg-col;
+    border: 2px solid $border-col;
+    color: $col;
+    padding: 2px 2px;
+    font-weight: bold;
+    font-size: $fz - 6;
+    cursor: pointer;
+    float: left;
+    outline: none;
+}
